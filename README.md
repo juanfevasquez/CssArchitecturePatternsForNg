@@ -2,26 +2,48 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+## An introduction to the problem I'm facing and you're probably facing
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+I started working with Angular 8 months ago.  My focus immediately shifted to learning more about ES6, RxJs, Typescript and NgRx, not so much Css.  But one day I started to wonder, how does css work in Angular?  I knew I had to write my styles in my component folder, but I didn't know why I had to do it that way.  Back then my client didn't care much about managing styles on the project, he would let Boostrap take care of it all and if there was any custom css to be written, well, overwrite what you need to overwrite and that's it, there wasn't much time to spare anyway.
 
-## Code scaffolding
+And it was just css after all...
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+It bugged me, having to work with css without a real mission.  I was raised to care a lot about css.
 
-I started working with Angular 8 months ago.  Before that I used to work with a team that had an stablished set of standards that allowed for creating very neat css and scss files.  This team was concerned about scalability, performance, debuggability, specificity, reusability and consistency.  Consistency was probably the biggest concern on our list.  It wasn't just about how the view would render and look like, we were also very concerned about the high turnover that existed at the company.  One day a developer was in the project, the next week he would be moved onto another project, fast forward 1 month and he'd be back with us, but this time he would find that 2 new devs were added to the team.  How could we guarantee that from his first commit, the css he wrote would comply with our stablished norms?  And how could we guarantee that, no matter how new you were to the team, a new developer wouldn't spend a lot of time understanding how we wanted to write the css and why we wanted to write it that way?  Consistency is difficult, but we managed it.
+So I started looking into how Angular manages css styles and I found some pretty awesome stuff like View Encapsulation.
 
-So back to the present, I'm working with Angular and the thing is that there's something called View Encapsulation where the css you write in a component is encapsulated, meaning if you have a component called A and a component called B, and both have a class named .title, they won't interfere.  Awesome!
+View Encapsulation is a way to mimic Shadow Dom, where you can add styles to a custom element blocking global styles from interfering with it.  And that means I can do whatever I want and it won't matter since it won't conflic with other global styles or component styles.  Easy and powerful!  No more problems with classes overriding clases overriding tag selectors overriding my :hover styles.
 
-You know, View Encapsulation is a way to mimic Shadow Dom, where you can add styles to a custom element and global styles won't interfere with it.  Cool, that means, I can do whatever I want and it won't matter since it won't conflic with other global styles or component styles.
+Well, not so easy and not so powerful.
 
-Well, no.
+As I started to understand more and more about css in Angular apps, I realized that even though Angular provides plenty of options to work with css, we continue to make the same old mistakes:
+* We still are overlooking how much impact css has on our app's performance.
+* We think that by just using a naming convention our scalability and debuggability issues are solved.
+* We continue ignoring specificity.
+* We think that using a css framework (think Bootstrap) solves the need to think about css architecture.  
 
-And that's an opinion I think is shared across a large group of developers who haven't had the opportunity to sit and learn how css work and how it can greatly affect the performance of your app or the sanity of your entire team.
+Before working in my first project with Angular 4 I worked with a team that had an stablished set of standards that allowed for creating very neat css and scss files.  This team was concerned about scalability, performance, debuggability, specificity, reusability and consistency.  Consistency was probably the biggest concern on our list.  It wasn't just about how the view would render and look like, we were also very concerned about the high turnover that existed at the company.  One day a developer was in the project, the next week he would be moved onto another project, fast forward 1 month and he'd be back with us, but this time he would find that 2 new devs were added to the team.  How could we guarantee that from his first commit, the css he wrote would comply with our stablished norms?  And how could we guarantee that a new developer wouldn't spend a lot of time understanding how we wanted to write the css and why we wanted to write it that way?  Consistency is difficult, but we managed it.
 
-## But BEM solves everything...
+There were a lot of lessons from this team that I really want to implement into my Angular app's css architecture.  I'll go through some basic topics first that will create our bedrock to continue scalating until we manage to create a complete set of practices that will turn your css styles into one of the strengths of your app.
 
-Naming conventions are great. They solve 2 big problems:
-* How you name your classes and selectors: it is a nightmare when you go through legacy code and find classes like **.curated-list** or **largeTitle-1**.  What does curated really mean or how many large titles are there?  Naming conventions solve this first by giving some structure to what your classes' names are, improving semantics greatly.
-* Performance: do you have any idea how hard it is for the JIT compiler to read this selector? **section ul > li > a.highlighted**  When we use only classes for selectors we improve the performance of the JIT compiler since it takes less effort to find **.list_item--highlighted-item** than the previous example.  I'll give some more details about how this works, but I won't go deep into the matter.  If you want to find out more about how css selectors affect performance then check [this video](https://youtu.be/DY_Glzs3Prc).
+Let's create our css knowledge bedrock.  These are the topics we'll touch:
+* How does css work in the browser
+  - Repaints and Reflows
+  - DOM Tree vs Render Tree
+  - Layout, Paint, Composite
+* Specificity
+  - The specificity wars
+  - How does selector matching work in the browser
+* Angular css styling
+  - Global scope
+  - View Encapsulation
+
+That looks like a lot to cover but trouble not, we won't go deep into each, though I'll provide links to articles that I personally recommend if you want to learn much more.
+
+So after laying our very solid foundation of css concepts, we'll go through a list of best practices that will improve the performance of our app:
+- What styles should be global
+- What styles should be encapsulated
+- How to manage css from vendors
+- ITCSS for Angular Apps
+
+
