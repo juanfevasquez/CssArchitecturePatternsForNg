@@ -19,8 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.sass"
+        "sass/styles.sass"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "../src/sass"
+        ]
+      },
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
