@@ -1,0 +1,44 @@
+.Header {
+    width: 100%;
+    padding: 16px 0;
+    margin: 0;
+    color: white;
+    background-color: #353535;
+
+    &_title,
+    &_description {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.IntroMessage {
+    position: relative;
+    width: 100%;
+    padding: 8px;
+    margin: 0 0 16px;
+    font-size: .85rem;
+    color: brown;
+    background-color: lightgoldenrodyellow;
+
+    &_title {
+        font-size: 1.25rem;
+        font-style: bold;
+    }
+
+    &_text {
+        margin-bottom: 8px;
+    }
+
+    &_closeIcon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: 1px solid lightgray;
+        cursor: pointer;
+    }
+}

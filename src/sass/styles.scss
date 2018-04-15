@@ -1,3 +1,47 @@
 @charset 'utf-8';
-@import './variables';
-@import './mixins';
+
+// Dependencies
+@import "../../node_modules/foundation-sites/_vendor/normalize-scss/sass/normalize";
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/missing-dependencies';
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/helpers/true';
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/purge';
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/remove';
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
+@import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
+
+// Sass utilities
+@import '../../node_modules/foundation-sites/scss/util/util';
+
+// Settings (Custom)
+@import "../assets/foundation-sites/settings";
+
+// Global variables and styles (Custom)
+@import '../assets/foundation-sites/global';
+
+// Components
+@import '../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../node_modules/foundation-sites/scss/typography/typography';
+@import '../../node_modules/foundation-sites/scss/forms/forms';
+@import '../../node_modules/foundation-sites/scss/components/flex';
+
+@mixin foundation-everything($flex: false) {
+    @if $flex {
+      $global-flexbox: true !global;
+    }
+  
+    @include foundation-global-styles;
+    @if not $flex {
+      @include foundation-grid;
+    }
+    @else {
+      @include foundation-flex-grid;
+    }
+    @include foundation-typography;
+    @include foundation-forms;
+
+    @if $flex {
+      @include foundation-flex-classes;
+    }
+}
+    
+    @include foundation-everything(true);

@@ -1,20 +1,136 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="Header">
+  <h1 class="Header_title">Star Wars Encyclopedia</h1>
+  <p class="Header_description">A demo of Angular Css architecture</p>
+</header>
+
+<section class="IntroMessage">
+  <h2 class="IntroMessage_title">About this Demo</h2>
+  <p class="IntroMessage_text">This is just a SPA that briefly shows my recommended pattern for Css Architecture on an Angular App</p>
+  <p class="IntroMessage_text">For more details you can visit the repo here.  Feel free to download it or fork it.</p>
+  <button class="IntroMessage_closeIcon">Close</button>
+</section>
+
+<div class="Container">
+
+  
+  <section class="Filters">
+    <ul class="Filters_list">
+      <li class="Filters_item"><a href="#" class="Filters_link">Characters</a></li>
+      <li class="Filters_item"><a href="#" class="Filters_link">Planets</a></li>
+      <li class="Filters_item"><a href="#" class="Filters_link">Ships</a></li>
+      <li class="Filters_item"><a href="#" class="Filters_link">Species</a></li>
+    </ul>
+  </section>
+  
+  <section class="Results">
+    <div class="Results_cardsContainer row">
+      <div class="Card columns">
+        <img class="Card_image" src="http://placehold.it/300x300" alt="Placeholdit Image">
+        <div class="Card_info">
+          <p class="Card_title">Card Title</p>
+          <div class="Card_films">
+            <p class="Card_filmsLabel">Mentioned in Episodes:</p>
+            <ul class="Card_list">
+              <li class="Card_listItem">I</li>
+              <li class="Card_listItem">II</li>
+              <li class="Card_listItem">III</li>
+              <li class="Card_listItem">IV</li>
+            </ul>
+          </div>
+          <a class="Card_url" href="">http://card-url-to-show</a>
+        </div>
+        <div class="Card_ctaContainer">
+          <a href="" class="Cta">See full details</a>
+        </div>
+      </div><!-- end of .Card -->
+  
+      <div class="Card columns">
+        <img class="Card_image" src="http://placehold.it/300x300" alt="Placeholdit Image">
+        <div class="Card_info">
+          <p class="Card_title">Card Title</p>
+          <div class="Card_films">
+            <p class="Card_filmsLabel">Mentioned in Episodes:</p>
+            <ul class="Card_list">
+              <li class="Card_listItem">I</li>
+              <li class="Card_listItem">II</li>
+              <li class="Card_listItem">III</li>
+              <li class="Card_listItem">IV</li>
+            </ul>
+          </div>
+          <a class="Card_url" href="">http://card-url-to-show</a>
+        </div>
+        <div class="Card_ctaContainer">
+          <a href="" class="Cta">See full details</a>
+        </div>
+      </div><!-- end of .Card -->
+  
+      <div class="Card columns">
+        <img class="Card_image" src="http://placehold.it/300x300" alt="Placeholdit Image">
+        <div class="Card_info">
+          <p class="Card_title">Card Title</p>
+          <div class="Card_films">
+            <p class="Card_filmsLabel">Mentioned in Episodes:</p>
+            <ul class="Card_list">
+              <li class="Card_listItem">I</li>
+              <li class="Card_listItem">II</li>
+              <li class="Card_listItem">III</li>
+              <li class="Card_listItem">IV</li>
+            </ul>
+          </div>
+          <a class="Card_url" href="">http://card-url-to-show</a>
+        </div>
+        <div class="Card_ctaContainer">
+          <a href="" class="Cta">See full details</a>
+        </div>
+      </div><!-- end of .Card -->
+  
+      <div class="Card columns">
+        <img class="Card_image" src="http://placehold.it/300x300" alt="Placeholdit Image">
+        <div class="Card_info">
+          <p class="Card_title">Card Title</p>
+          <div class="Card_films">
+            <p class="Card_filmsLabel">Mentioned in Episodes:</p>
+            <ul class="Card_list">
+              <li class="Card_listItem">I</li>
+              <li class="Card_listItem">II</li>
+              <li class="Card_listItem">III</li>
+              <li class="Card_listItem">IV</li>
+            </ul>
+          </div>
+          <a class="Card_url" href="">http://card-url-to-show</a>
+        </div>
+        <div class="Card_ctaContainer">
+          <a href="" class="Cta">See full details</a>
+        </div>
+      </div><!-- end of .Card -->
+  
+      <div class="Card columns">
+        <img class="Card_image" src="http://placehold.it/300x300" alt="Placeholdit Image">
+        <div class="Card_info">
+          <p class="Card_title">Card Title</p>
+          <div class="Card_films">
+            <p class="Card_filmsLabel">Mentioned in Episodes:</p>
+            <ul class="Card_list">
+              <li class="Card_listItem">I</li>
+              <li class="Card_listItem">II</li>
+              <li class="Card_listItem">III</li>
+              <li class="Card_listItem">IV</li>
+            </ul>
+          </div>
+          <a class="Card_url" href="">http://card-url-to-show</a>
+        </div>
+        <div class="Card_ctaContainer">
+          <a href="" class="Cta">See full details</a>
+        </div>
+      </div><!-- end of .Card -->
+    </div>
+  </section>
+
+</div><!-- end .container -->
+
+<footer class="Footer">
+  <p class="Footer_note">Made with <a class="Footer_link">Angular-cli</a> and <a class="Footer_link">Foundation-sites</a></p>
+  <p class="Footer_note">Css Architecture Patterns for Ng Apps</p>
+  <p class="Footer_note">By: <a class="Footer_link">Juanfe Vasquez</a></p>
+</footer>
 
