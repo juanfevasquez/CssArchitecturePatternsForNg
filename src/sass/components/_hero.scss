@@ -1,0 +1,28 @@
+.Hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  background-color: $angular-blue;
+
+  &_img {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 15px auto;
+  }
+
+  &_title {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    font-size: 2rem;
+    color: $white;
+  }
+}

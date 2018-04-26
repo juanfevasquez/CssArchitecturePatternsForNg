@@ -1,48 +1,48 @@
-@import '~sass/variables/colors';
+// @import '~sass/variables/colors';
 
-:host {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  padding: 5px;
-  margin: 0 5px 15px;
-  box-sizing: border-box;
-  background-color: $white;
-  border: 1px solid $grey;
-}
+// :host {
+//   position: relative;
+//   width: 100%;
+//   max-width: 300px;
+//   padding: 5px;
+//   margin: 0 5px 15px;
+//   box-sizing: border-box;
+//   background-color: $white;
+//   border: 1px solid $grey;
+// }
 
-.Card {
+// .Card {
 
-  &_thumbnail {
-    max-width: 100%;
-  }
+//   &_thumbnail {
+//     max-width: 100%;
+//   }
 
-  &_content {
-    margin-bottom: 15px;
-  }
+//   &_content {
+//     margin-bottom: 15px;
+//   }
 
-  &_title {
-    font-size: 2rem;
-    font-weight: 100;
-  }
+//   &_title {
+//     font-size: 2rem;
+//     font-weight: 100;
+//   }
 
-  &_info {
-    color: #666;
-    font-family: Georgia, serif;
-    font-size: .85rem;
-  }
+//   &_info {
+//     color: #666;
+//     font-family: Georgia, serif;
+//     font-size: .85rem;
+//   }
 
-  &_detail {
-    font-style: italic;
-  }
+//   &_detail {
+//     font-style: italic;
+//   }
 
-  &_link {
-    color: $angular-blue;
-    text-decoration: underline;
-  }
+//   &_link {
+//     color: $angular-blue;
+//     text-decoration: underline;
+//   }
 
-  &_ctaContainer {
-    padding: 5px;
-  }
-}
+//   &_ctaContainer {
+//     padding: 5px;
+//   }
+// }
 
