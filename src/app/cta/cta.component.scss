@@ -1,0 +1,17 @@
+.Cta {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  text-align: center;
+
+  &--link {
+    color: white;
+    background-color: cornflowerblue;
+  }
+
+  &--link:hover {
+    background-color: darkgray;
+  }
+}
+
